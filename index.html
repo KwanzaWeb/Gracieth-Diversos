@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gracieth Diversos — Perucas e Cosméticos em Angola</title>
+<meta name="description" content="Compre perucas, cosméticos e roupas online com entrega em Cabinda e Luanda. Encomendas personalizadas." />
+<link rel="icon" href="images/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="logo">
+      <img src="logo.jpg.jpeg" alt="Gracieth Diversos" />
+      <span>Gracieth <em>Diversos</em></span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="#home">Início</a>
+      <a href="#perucas">Perucas</a>
+      <a href="#cosmeticos">Cosméticos</a>
+      <a href="#encomendas">Encomendas</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#carrinho" class="cart-btn" aria-label="Carrinho">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<aside class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Fechar">✕</button>
+  <a href="#home">Início</a>
+  <a href="#perucas">Perucas</a>
+  <a href="#cosmeticos">Cosméticos</a>
+  <a href="#encomendas">Encomendas</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contacto">Contacto</a>
+</aside>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg" style="background-image:url('fu.jpg.jpeg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content reveal">
+    <span class="badge">✨ Novidades chegaram</span>
+    <h1>Beleza autêntica, <span class="gradient-text">estilo único</span>.</h1>
+    <p>Perucas, cosméticos e roupas selecionadas a dedo para si. Entregamos em Cabinda e Luanda, com encomendas personalizadas.</p>
+    <div class="hero-ctas">
+      <a href="#perucas" class="btn btn-primary">Ver Perucas</a>
+      <a href="#cosmeticos" class="btn btn-secondary">Ver Cosméticos</a>
+    </div>
+    <div class="hero-info">
+      <span>   Entrega em Cabinda &amp; Luanda</span>
+      <span>💬 Atendimento via WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="section container">
+  <h2 class="section-title reveal">As nossas <span class="gradient-text">categorias</span></h2>
+  <p class="section-sub reveal">Explore a coleção dividida por tipo de produto.</p>
+  <div class="categories">
+    <a href="#perucas" class="category-card reveal">
+      <img src="pd.jpg.jpeg" alt="Perucas" />
+      <div class="category-info">
+        <h3>Perucas</h3>
+        <p>Lace front, cacheadas, lisas e tranças.</p>
+        <span>Ver coleção →</span>
+      </div>
+    </a>
+    <a href="#cosmeticos" class="category-card reveal">
+      <img src="cc.jpg.jpeg" alt="Cosméticos" />
+      <div class="category-info">
+        <h3>Cosméticos</h3>
+        <p>Maquilhagem, perfumes e cuidados.</p>
+        <span>Ver coleção →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- PERUCAS -->
+<section id="perucas" class="section container">
+  <div class="section-head reveal">
+    <span class="eyebrow">Coleção</span>
+    <h2>Perucas <span class="gradient-text">premium</span></h2>
+    <p>Modelos para todos os estilos — naturais, ousados e elegantes.</p>
+  </div>
+  <div class="products-grid" id="perucasGrid"></div>
+</section>
+
+<!-- COSMÉTICOS -->
+<section id="cosmeticos" class="section container">
+  <div class="section-head reveal">
+    <span class="eyebrow">Coleção</span>
+    <h2>Cosméticos <span class="gradient-text">para brilhar</span></h2>
+    <p>Maquilhagem, perfumes e cuidados de qualidade.</p>
+  </div>
+  <div class="products-grid" id="cosmeticosGrid"></div>
+</section>
+
+<!-- ENCOMENDAS -->
+<section id="encomendas" class="section container">
+  <div class="encomenda-banner reveal">
+    <h3>Não encontrou o que procura?</h3>
+    <p>Aceitamos encomendas personalizadas — diga-nos o produto, marca ou estilo, e tratamos do resto.</p>
+    <form id="encomendaForm" class="encomenda-form">
+      <div class="grid-2">
+        <label>Nome
+          <input type="text" name="nome" required />
+        </label>
+        <label>Cidade
+          <select name="cidade">
+            <option>Cabinda</option>
+            <option>Luanda</option>
+            <option>Outra</option>
+          </select>
+        </label>
+      </div>
+      <label>Produto desejado
+        <input type="text" name="produto" placeholder="Ex: Peruca lace front 26 polegadas" required />
+      </label>
+      <label>Detalhes
+        <textarea name="detalhes" rows="4" placeholder="Cor, marca, tamanho, prazo..."></textarea>
+      </label>
+      <button type="submit" class="btn btn-whatsapp">💬 Enviar pedido via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="section container">
+  <div class="sobre-grid">
+    <div class="reveal">
+      <span class="eyebrow">Sobre nós</span>
+      <h2>A história da <span class="gradient-text">Gracieth Diversos</span></h2>
+      <p>Nascemos com o sonho de oferecer a cada mulher angolana acesso fácil a perucas, cosméticos e roupas de qualidade. Hoje, servimos clientes em Cabinda e Luanda, com encomendas personalizadas e atendimento humano via WhatsApp.</p>
+      <p>Acreditamos que cada cliente merece sentir-se única.</p>
+    </div>
+    <div class="reveal">
+      <img src="logo.jpg.jpeg" alt="Gracieth Diversos" class="sobre-logo" />
+    </div>
+  </div>
+  <div class="values">
+    <div class="value reveal"><div class="value-ico">❤️</div><h4>Qualidade</h4><p>Cada produto selecionado com carinho.</p></div>
+    <div class="value reveal"><div class="value-ico">✨</div><h4>Autenticidade</h4><p>Marcas e fornecedores de confiança.</p></div>
+    <div class="value reveal"><div class="value-ico">🚚</div><h4>Entregas rápidas</h4><p>Cabinda e Luanda.</p></div>
+    <div class="value reveal"><div class="value-ico">👥</div><h4>Atendimento próximo</h4><p>Falamos consigo no WhatsApp.</p></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section container">
+  <h2 class="section-title reveal">Onde nos <span class="gradient-text">encontrar</span></h2>
+  <div class="contacto-grid">
+    <div class="contacto-card reveal">
+      <div class="ico">📍</div>
+      <h3>Cabinda</h3>
+      <p>Entregas locais e levantamento. Contacte-nos pelo WhatsApp.</p>
+    </div>
+    <div class="contacto-card reveal">
+      <div class="ico">📍</div>
+      <h3>Luanda</h3>
+      <p>Entregas locais e levantamento. Contacte-nos pelo WhatsApp.</p>
+    </div>
+  </div>
+  <div class="contacto-links reveal">
+    <a href="https://wa.me/244928626160" target="_blank" class="btn btn-whatsapp">💬 WhatsApp +244 928 626 160</a>
+    <a href="https://www.tiktok.com/@graciethdiversos" target="_blank" class="btn btn-secondary">🎵 TikTok @graciethdiversos</a>
+  </div>
+</section>
+
+<!-- CARRINHO -->
+<section id="carrinho" class="section container">
+  <h2 class="section-title">O seu <span class="gradient-text">carrinho</span></h2>
+  <div id="cartItems" class="cart-list"></div>
+  <div id="cartEmpty" class="cart-empty">O carrinho está vazio.</div>
+  <div id="cartFooter" class="cart-footer" hidden>
+    <div class="cart-total">Total: <strong id="cartTotal">0 Kz</strong></div>
+    <button id="checkoutBtn" class="btn btn-whatsapp">💬 Finalizar no WhatsApp</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="logo">
+        <img src="logo.jpg.jpeg" alt="Gracieth" />
+        <span>Gracieth <em>Diversos</em></span>
+      </div>
+      <p>Perucas, cosméticos e roupas — Cabinda &amp; Luanda.</p>
+    </div>
+    <div>
+      <h5>Navegação</h5>
+      <a href="#perucas">Perucas</a>
+      <a href="#cosmeticos">Cosméticos</a>
+      <a href="#encomendas">Encomendas</a>
+      <a href="#sobre">Sobre</a>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <a href="https://wa.me/244928626160" target="_blank">WhatsApp: +244 928 626 160</a>
+      <a href="https://www.tiktok.com/@graciethdiversos" target="_blank">TikTok: @graciethdiversos</a>
+    </div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Gracieth Diversos. Todos os direitos reservados.</div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a href="https://wa.me/244928626160" target="_blank" class="wa-fab" aria-label="WhatsApp">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
